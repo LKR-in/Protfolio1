@@ -231,6 +231,9 @@ export default function PortfolioHero() {
       </header>
 
       <main id="home" className="relative flex min-h-screen flex-col overflow-hidden">
+        <h1 className="sr-only">
+          Lavjeet Kumar Rai - Full-Stack Developer and AI Research Learner
+        </h1>
         <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-4">
           <div className="relative text-center">
             <div>
@@ -263,7 +266,7 @@ export default function PortfolioHero() {
               >
                 <img
                   src="images/logo.png?auto=format&fit=crop&w=480&q=80"
-                  alt="Profile"
+                  alt="Lavjeet Kumar Rai profile photo"
                   className="h-full w-full object-cover"
                 />
               </button>
