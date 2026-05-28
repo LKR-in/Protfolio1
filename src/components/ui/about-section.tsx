@@ -70,25 +70,26 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
             </div>
             <div className="flex gap-4">
               {[
-                ["https://www.facebook.com/", "facebook", "https://pro-section.ui-layouts.com/facebook.svg"],
-                ["https://www.instagram.com/", "instagram", "https://pro-section.ui-layouts.com/instagram.svg"],
-                ["https://www.linkedin.com/", "linkedin", "https://pro-section.ui-layouts.com/linkedin.svg"],
-                ["https://www.youtube.com/", "youtube", "https://pro-section.ui-layouts.com/youtube.svg"],
+                ["/lavjeet.pdf", "CV", "https://tse3.mm.bing.net/th/id/OIP.4Kapo4aAUP8GXaxiSQD31AHaHa?r=0&w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3"],
+                ["https://github.com/lavjeetrai", "Github", "https://tse1.mm.bing.net/th/id/OIP.Vn8Aa5ypdPND2xyceZIAdAHaHS?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"],
+                ["https://www.linkedin.com/in/lavjeet-rai/", "linkedin", "https://pro-section.ui-layouts.com/linkedin.svg"],
+                ["https://x.com/lavjeetkumarrai", "X", "https://tse2.mm.bing.net/th/id/OIP.z9biYzgYCWSGlEmd5TjRogHaHb?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"],
               ].map(([href, label, src], index) => (
                 <TimelineContent
                   key={label}
-                  as="a"
-                  animationNum={index}
-                  timelineRef={heroRef}
-                  customVariants={revealVariants}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex h-5 w-5 cursor-pointer items-center justify-center rounded-lg border border-neutral-700 ${panelBg} sm:h-6 sm:w-6 md:h-8 md:w-8`}
-                >
-                  <img src={src} alt={label} width={24} height={24} />
-                </TimelineContent>
-              ))}
+                    as="a"
+                    animationNum={index}
+                     timelineRef={heroRef}
+                       customVariants={revealVariants}
+                        href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+      // Added 'relative z-50' below, but kept the rest of your exact classes
+                       className={`relative z-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-lg border border-neutral-700 ${panelBg} sm:h-6 sm:w-6 md:h-8 md:w-8`}
+                         >
+                        <img src={src} alt={label} width={39} height={39} />
+                        </TimelineContent>
+  ))}
             </div>
           </div>
 
@@ -112,8 +113,8 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 clipPath="url(#clip-inverted)"
                 preserveAspectRatio="xMidYMid slice"
                 width="100%"
-                height="100%"
-                href="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop"
+                height="130%"
+                href="images/backgrnd.jpeg?w=1200&auto=format&fit=crop"
               />
             </svg>
           </TimelineContent>
@@ -127,12 +128,12 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
               className="flex gap-4"
             >
               <div className="mb-2 flex items-center gap-2 text-xs sm:text-base">
-                <span className="font-bold text-[#C3E41D]">2+</span>
+                <span className="font-bold text-[#C3E41D]">1+</span>
                 <span className={mutedColor}>years learning by building</span>
                 <span className="text-neutral-500">|</span>
               </div>
               <div className="mb-2 flex items-center gap-2 text-xs sm:text-base">
-                <span className="font-bold text-[#C3E41D]">20+</span>
+                <span className="font-bold text-[#C3E41D]">10+</span>
                 <span className={mutedColor}>projects explored</span>
               </div>
             </TimelineContent>
@@ -145,7 +146,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 className="mb-2 flex items-center gap-2 text-2xl sm:text-3xl lg:text-4xl"
               >
                 <span className="font-semibold text-[#C3E41D]">100%</span>
-                <span className={`${mutedColor} uppercase`}>curious</span>
+                <span className={`${mutedColor} uppercase`}>lazy</span>
               </TimelineContent>
               <TimelineContent
                 as="div"
@@ -154,8 +155,6 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 customVariants={revealVariants}
                 className="mb-2 flex items-center gap-2 text-xs sm:text-base"
               >
-                <span className="font-bold text-[#C3E41D]">Daily</span>
-                <span className={mutedColor}>practice mindset</span>
                 <span className="block text-neutral-500 lg:hidden">|</span>
               </TimelineContent>
             </div>
@@ -177,7 +176,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                   delay: 0.4,
                 }}
               >
-                Building clean interfaces with patient curiosity.
+               Architecting Intelligence: Full-Stack Development & AI Research
               </VerticalCutReveal>
             </h1>
 
@@ -196,8 +195,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 className="text-xs sm:text-base"
               >
                 <p className="text-justify leading-relaxed">
-                  I enjoy turning rough ideas into thoughtful web experiences,
-                  keeping the work simple, responsive, and easy to understand.
+                  I enjoy transforming advanced AI research and rough concepts into resilient, full-stack applications, keeping the underlying architecture strictly logical, scalable, and grounded in solid evidence. My focus is on learning deeply—whether that means exploring LLM fine-tuning or optimizing low-level WebAssembly
                 </p>
               </TimelineContent>
               <TimelineContent
@@ -208,8 +206,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 className="text-xs sm:text-base"
               >
                 <p className="text-justify leading-relaxed">
-                  My focus is on learning deeply, improving steadily, and
-                  building projects that feel smooth for the people using them.
+                  improving steadily through rigorous problem-solving, and building intelligent platforms like LearnX that feel seamless for the people using them. Ultimately, I aim to bridge the gap between heavy computational theory and intuitive, accessible software.
                 </p>
               </TimelineContent>
             </TimelineContent>
