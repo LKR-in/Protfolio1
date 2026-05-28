@@ -6,21 +6,24 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "serve": "vite preview --host 0.0.0.0"
+    "preview": "npm run build && wrangler dev",
+    "serve": "vite preview --host 0.0.0.0",
+    "deploy": "npm run build && wrangler deploy"
   },
   "engines": {
     "node": "^20.19.0 || >=22.12.0",
     "npm": ">=10"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.39.0",
     "@tailwindcss/vite": "^4.3.0",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
     "tailwindcss": "^4.3.0",
     "typescript": "~6.0.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "wrangler": "^4.95.0"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
