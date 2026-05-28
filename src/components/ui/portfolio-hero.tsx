@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import AboutSection from "@/components/ui/about-section";
+import ContactSection from "@/components/ui/contact-section";
+import ExperienceSection from "@/components/ui/experience-section";
 import ProjectsSection from "@/components/ui/projects-section";
 
 const Button = React.forwardRef<
@@ -130,7 +132,6 @@ export default function PortfolioHero() {
   { label: "ABOUT", href: "#about" },
   { label: "PROJECTS", href: "#projects" },
   { label: "EXPERIENCE", href: "#experience" },
-  { label: "EDUCATION", href: "#education" },
   { label: "BLOG", href: "#blog" },
   { label: "CONTACT", href: "#contact" },
 ];
@@ -285,6 +286,8 @@ export default function PortfolioHero() {
       </main>
       <AboutSection isDark={isDark} />
       <ProjectsSection isDark={isDark} />
+      <ExperienceSection isDark={isDark} />
+      <ContactSection isDark={isDark} />
     </div>
   );
 }
