@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
+import ButtonSocialIconDemo from "@/components/ui/social-icon";
 
 interface AboutSectionProps {
   isDark?: boolean;
@@ -12,7 +13,6 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
   const sectionBg = isDark ? "hsl(0 0% 0%)" : "hsl(0 0% 98%)";
   const textColor = isDark ? "text-white" : "text-neutral-950";
   const mutedColor = isDark ? "text-neutral-400" : "text-neutral-600";
-  const panelBg = isDark ? "bg-neutral-950" : "bg-white";
 
   const revealVariants = {
     visible: (i: number) => ({
@@ -68,29 +68,14 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 WHO I AM
               </TimelineContent>
             </div>
-            <div className="flex gap-4">
-              {[
-                ["/lavjeet.pdf", "CV", "https://tse3.mm.bing.net/th/id/OIP.4Kapo4aAUP8GXaxiSQD31AHaHa?r=0&w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3"],
-                ["https://github.com/lavjeetrai", "Github", "https://tse1.mm.bing.net/th/id/OIP.Vn8Aa5ypdPND2xyceZIAdAHaHS?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"],
-                ["https://www.linkedin.com/in/lavjeet-rai/", "linkedin", "https://pro-section.ui-layouts.com/linkedin.svg"],
-                ["https://x.com/lavjeetkumarrai", "X", "https://tse2.mm.bing.net/th/id/OIP.z9biYzgYCWSGlEmd5TjRogHaHb?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"],
-              ].map(([href, label, src], index) => (
-                <TimelineContent
-                  key={label}
-                    as="a"
-                    animationNum={index}
-                     timelineRef={heroRef}
-                       customVariants={revealVariants}
-                        href={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-      // Added 'relative z-50' below, but kept the rest of your exact classes
-                       className={`relative z-50 flex h-5 w-5 cursor-pointer items-center justify-center rounded-lg border border-neutral-700 ${panelBg} sm:h-6 sm:w-6 md:h-8 md:w-8`}
-                         >
-                        <img src={src} alt={label} width={39} height={39} />
-                        </TimelineContent>
-  ))}
-            </div>
+            <TimelineContent
+              as="div"
+              animationNum={1}
+              timelineRef={heroRef}
+              customVariants={revealVariants}
+            >
+              <ButtonSocialIconDemo />
+            </TimelineContent>
           </div>
 
           <TimelineContent

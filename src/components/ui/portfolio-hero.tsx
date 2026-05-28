@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import AboutSection from "@/components/ui/about-section";
+import ProjectsSection from "@/components/ui/projects-section";
 
 const Button = React.forwardRef<
   HTMLButtonElement,
@@ -283,6 +284,7 @@ export default function PortfolioHero() {
         </Button>
       </main>
       <AboutSection isDark={isDark} />
+      <ProjectsSection isDark={isDark} />
     </div>
   );
 }
