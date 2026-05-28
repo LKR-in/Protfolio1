@@ -57,7 +57,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
         <div className="relative">
           <div className="absolute -top-3 z-10 flex w-[85%] items-center justify-between sm:-top-2 md:top-0 lg:top-4">
             <div className="flex items-center gap-2 text-xl">
-              <span className="animate-spin text-[#C3E41D]">✱</span>
+              <span className="animate text-[#C3E41D]">^_^</span>
               <TimelineContent
                 as="span"
                 animationNum={0}
@@ -180,7 +180,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 className="text-xs sm:text-base"
               >
                 <p className="text-justify leading-relaxed">
-                  I enjoy transforming advanced AI research and rough concepts into resilient, full-stack applications, keeping the underlying architecture strictly logical, scalable, and grounded in solid evidence. My focus is on learning deeply—whether that means exploring LLM fine-tuning or optimizing low-level WebAssembly
+                  I enjoy transforming advanced AI research and rough concepts into resilient, full-stack applications, keeping the underlying architecture strictly logical, scalable, and grounded in solid evidence. My focus is on learning deeply, whether that means exploring LLM fine-tuning or optimizing low-level WebAssembly.
                 </p>
               </TimelineContent>
               <TimelineContent

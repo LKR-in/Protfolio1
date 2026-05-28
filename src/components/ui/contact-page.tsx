@@ -128,7 +128,7 @@ export function ContactPage() {
             </div>
             <div className="mx-auto h-px w-24 bg-neutral-200 dark:bg-neutral-800" />
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
-              © {new Date().getFullYear()} Lavjeet
+              (c) {new Date().getFullYear()} Lavjeet
             </p>
             <p className="text-sm text-neutral-500 dark:text-neutral-400">
               Designed, built, and kept quietly improving.

@@ -1,7 +1,15 @@
 import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const socialLinks = [
+// Re-added TypeScript definition for type safety
+type SocialLink = {
+  label: string;
+  href: string;
+  icon?: string;
+  darkIcon?: string;
+};
+
+const socialLinks: SocialLink[] = [
   {
     label: "CV",
     href: "/lavjeet.pdf",
@@ -40,17 +48,28 @@ const ButtonSocialIconDemo = () => {
             rel="noopener noreferrer"
             aria-label={`Open ${item.label}`}
           >
+            {/* Renders Lucide Icon for CV */}
             {item.label === "CV" && <FileText className="h-4 w-4" />}
+            
+            {/* Renders Text for X */}
             {item.label === "X" && <span className="text-sm font-semibold">X</span>}
+            
+            {/* Renders Light Mode / Default SVG */}
             {item.icon && (
               <img
                 src={item.icon}
                 alt=""
-                className={`${item.darkIcon ? "dark:hidden " : ""}h-4 w-4`}
+                className={`h-4 w-4 ${item.darkIcon ? "dark:hidden" : ""}`}
               />
             )}
+            
+            {/* Renders Dark Mode SVG (only visible in dark mode) */}
             {item.darkIcon && (
-              <img src={item.darkIcon} alt="" className="hidden h-4 w-4 dark:block" />
+              <img 
+                src={item.darkIcon} 
+                alt="" 
+                className="hidden h-4 w-4 dark:block" 
+              />
             )}
           </a>
         </Button>
