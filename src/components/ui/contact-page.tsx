@@ -45,7 +45,7 @@ export function ContactPage() {
             <p className="mb-3 text-sm font-medium uppercase text-[#C3E41D]">
               Contact
             </p>
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl">
+            <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
               Let&apos;s build something useful.
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -109,7 +109,7 @@ export function ContactPage() {
           />
 
           <div className="relative z-10 space-y-6 text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">Find me online</h2>
+            <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl">Find me online</h2>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {socialLinks.map((link) => (
                 <a

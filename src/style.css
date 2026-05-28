@@ -11,11 +11,18 @@ body {
   box-sizing: border-box;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: system-ui, "Segoe UI", Roboto, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 .scrollbar-hide {

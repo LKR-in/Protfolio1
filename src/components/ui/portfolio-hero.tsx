@@ -135,8 +135,8 @@ export default function PortfolioHero() {
   { label: "ABOUT", href: "#about" },
   { label: "PROJECTS", href: "#projects" },
   { label: "EXPERIENCE", href: "#experience" },
-  { label: "BLOG", href: "#blog" },
   { label: "CONTACT", href: "#contact" },
+  { label: "BLOG", href: "#blog" }
 ];
   return (
     <div
@@ -146,7 +146,7 @@ export default function PortfolioHero() {
         color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)",
       }}
     >
-      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-6">
+      <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4 sm:px-6 sm:py-6">
         <nav className="mx-auto flex max-w-screen-2xl items-center justify-between">
           <div className="relative">
             <Button
@@ -157,16 +157,16 @@ export default function PortfolioHero() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
-                <X className="h-8 w-8 transition-colors duration-300" strokeWidth={2} />
+                <X className="h-6 w-6 transition-colors duration-300 sm:h-8 sm:w-8" strokeWidth={2} />
               ) : (
-                <Menu className="h-8 w-8 transition-colors duration-300" strokeWidth={2} />
+                <Menu className="h-6 w-6 transition-colors duration-300 sm:h-8 sm:w-8" strokeWidth={2} />
               )}
             </Button>
 
             {isMenuOpen && (
               <div
                 ref={menuRef}
-                className="absolute top-full left-0 z-[100] mt-2 ml-4 w-[200px] rounded-lg border-none p-4 shadow-2xl md:w-[240px]"
+                className="absolute top-full left-0 z-[100] mt-2 w-[min(220px,calc(100vw-2rem))] rounded-lg border-none p-4 shadow-2xl sm:ml-4 md:w-[240px]"
                 style={{
                   backgroundColor: isDark ? "hsl(0 0% 0%)" : "hsl(0 0% 98%)",
                 }}
@@ -175,7 +175,7 @@ export default function PortfolioHero() {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="block cursor-pointer px-2 py-1.5 text-lg font-bold tracking-tight transition-colors duration-300 md:text-xl"
+                    className="block cursor-pointer px-2 py-1.5 text-base font-bold tracking-tight transition-colors duration-300 sm:text-lg md:text-xl"
                     style={{
                       color: item.highlight
                         ? "#C3E41D"
@@ -203,7 +203,7 @@ export default function PortfolioHero() {
           </div>
 
          <div
-          className="text-4xl transition-transform duration-300 hover:scale-110 cursor-pointer inline-block"
+          className="inline-block cursor-pointer text-3xl transition-transform duration-300 hover:scale-110 sm:text-4xl"
           style={{
           color: isDark ? "hsl(0 0% 100%)" : "hsl(0 0% 10%)",
           fontFamily: "'Brush Script MT', 'Lucida Handwriting', cursive",
@@ -230,11 +230,11 @@ export default function PortfolioHero() {
         </nav>
       </header>
 
-      <main id="home" className="relative flex min-h-screen flex-col overflow-hidden">
+      <main id="home" className="relative flex min-h-svh flex-col overflow-hidden">
         <h1 className="sr-only">
           Lavjeet Kumar Rai - Full-Stack Developer and AI Research Learner
         </h1>
-        <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-4">
+        <div className="absolute top-1/2 left-1/2 w-full max-w-full -translate-x-1/2 -translate-y-1/2 px-3 sm:px-4">
           <div className="relative text-center">
             <div>
               <BlurText
@@ -242,7 +242,7 @@ export default function PortfolioHero() {
                 delay={100}
                 animateBy="letters"
                 direction="top"
-                className="justify-center whitespace-nowrap font-bold text-[100px] leading-[0.75] tracking-tighter uppercase sm:text-[140px] md:text-[180px] lg:text-[210px]"
+                className="justify-center whitespace-nowrap font-bold text-[clamp(3.25rem,18vw,6.25rem)] leading-[0.78] uppercase sm:text-[140px] md:text-[180px] lg:text-[210px]"
                 style={{ color: "#C3E41D", fontFamily: "'Fira Code', monospace" }}
               />
             </div>
@@ -252,7 +252,7 @@ export default function PortfolioHero() {
                 delay={100}
                 animateBy="letters"
                 direction="top"
-                className="justify-center whitespace-nowrap font-bold text-[100px] leading-[0.75] tracking-tighter uppercase sm:text-[140px] md:text-[180px] lg:text-[210px]"
+                className="justify-center whitespace-nowrap font-bold text-[clamp(3.25rem,18vw,6.25rem)] leading-[0.78] uppercase sm:text-[140px] md:text-[180px] lg:text-[210px]"
                 style={{ color: "#C3E41D", fontFamily: "'Fira Code', monospace" }}
               />
             </div>
@@ -260,7 +260,7 @@ export default function PortfolioHero() {
             <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
               <button
                 type="button"
-                className="h-[110px] w-[65px] cursor-pointer overflow-hidden rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C3E41D] sm:h-[152px] sm:w-[90px] md:h-[185px] md:w-[110px] lg:h-[218px] lg:w-[129px]"
+                className="h-[96px] w-[57px] cursor-pointer overflow-hidden rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C3E41D] sm:h-[152px] sm:w-[90px] md:h-[185px] md:w-[110px] lg:h-[218px] lg:w-[129px]"
                 aria-label="Open profile card"
                 onClick={() => setIsProfileCardOpen(true)}
               >
@@ -277,7 +277,7 @@ export default function PortfolioHero() {
         <AnimatePresence>
           {isProfileCardOpen && (
             <div
-              className="fixed inset-0 z-[80] flex items-center justify-center bg-black/20 px-4 py-8 backdrop-blur-[2px] md:items-center md:justify-end md:px-10"
+              className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto bg-black/20 px-3 py-8 backdrop-blur-[2px] md:items-center md:justify-end md:px-10"
               onMouseDown={() => setIsProfileCardOpen(false)}
               role="presentation"
             >
@@ -288,7 +288,7 @@ export default function PortfolioHero() {
           )}
         </AnimatePresence>
 
-        <div className="absolute bottom-16 left-1/2 w-full -translate-x-1/2 px-6 sm:bottom-20 md:bottom-24 lg:bottom-32 xl:bottom-36">
+        <div className="absolute bottom-14 left-1/2 w-full -translate-x-1/2 px-4 sm:bottom-20 sm:px-6 md:bottom-24 lg:bottom-32 xl:bottom-36">
           <div className="flex justify-center">
             <BlurText
               text="Laziness is the key...."

@@ -29,7 +29,7 @@ export default function JobSlider() {
   };
 
   return (
-    <section className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-10 rounded-lg border border-neutral-200 bg-white px-4 py-8 transition-colors dark:border-neutral-800 dark:bg-neutral-950 md:flex-row md:px-8 md:py-10">
+    <section className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-8 rounded-lg border border-neutral-200 bg-white px-4 py-8 transition-colors dark:border-neutral-800 dark:bg-neutral-950 md:flex-row md:gap-10 md:px-8 md:py-10">
       <div className="w-full space-y-5 text-left md:w-2/5">
         <p className="mb-3 text-sm font-medium uppercase text-[#C3E41D]">
           Experience Map
@@ -40,7 +40,7 @@ export default function JobSlider() {
           className="mx-auto aspect-[4/3] w-full max-w-[320px] rounded-lg border border-neutral-200 object-cover shadow-lg shadow-neutral-200/60 dark:border-neutral-800 dark:shadow-black/40 md:mx-0"
         />
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold leading-tight text-neutral-950 dark:text-white md:text-5xl">
+          <h2 className="text-2xl font-semibold leading-tight text-neutral-950 dark:text-white sm:text-3xl md:text-5xl">
             Laziness is the key...
           </h2>
           <p className="max-w-md text-neutral-600 dark:text-neutral-400">
@@ -49,12 +49,12 @@ export default function JobSlider() {
         </div>
       </div>
 
-      <div className="relative flex w-full items-center md:w-1/2">
+      <div className="relative flex w-full items-center px-2 sm:px-0 md:w-1/2">
         <Button
           type="button"
           variant="ghost"
           size="icon"
-          className="absolute -left-4 top-1/2 z-10 rounded-full border border-neutral-200 bg-white shadow hover:bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800 sm:-left-6"
+          className="absolute -left-1 top-1/2 z-10 rounded-full border border-neutral-200 bg-white shadow hover:bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800 sm:-left-6"
           onClick={handlePrev}
           aria-label="Previous roles"
         >
@@ -93,7 +93,7 @@ export default function JobSlider() {
           type="button"
           variant="ghost"
           size="icon"
-          className="absolute -right-4 top-1/2 z-10 rounded-full border border-neutral-200 bg-white shadow hover:bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800 sm:-right-6"
+          className="absolute -right-1 top-1/2 z-10 rounded-full border border-neutral-200 bg-white shadow hover:bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:bg-neutral-800 sm:-right-6"
           onClick={handleNext}
           aria-label="Next roles"
         >

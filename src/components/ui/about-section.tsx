@@ -55,7 +55,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
     >
       <div className="mx-auto max-w-6xl">
         <div className="relative">
-          <div className="absolute -top-3 z-10 flex w-[85%] items-center justify-between sm:-top-2 md:top-0 lg:top-4">
+          <div className="relative z-10 mb-4 flex flex-wrap items-center justify-between gap-3 md:absolute md:top-0 md:mb-0 md:w-[85%] lg:top-4">
             <div className="flex items-center gap-2 text-xl">
               <span className="animate text-[#C3E41D]">^_^</span>
               <TimelineContent
@@ -85,7 +85,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
             customVariants={scaleVariants}
             className="group relative"
           >
-            <svg className="w-full" width="100%" height="100%" viewBox="0 0 100 40">
+            <svg className="min-h-[150px] w-full sm:min-h-0" width="100%" height="100%" viewBox="0 0 100 40">
               <defs>
                 <clipPath id="clip-inverted" clipPathUnits="objectBoundingBox">
                   <path
@@ -104,13 +104,13 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
             </svg>
           </TimelineContent>
 
-          <div className="flex flex-wrap items-center justify-between py-3 text-sm lg:justify-start">
+          <div className="flex flex-col gap-2 py-3 text-sm sm:flex-row sm:flex-wrap sm:items-center sm:justify-between lg:justify-start">
             <TimelineContent
               as="div"
               animationNum={5}
               timelineRef={heroRef}
               customVariants={revealVariants}
-              className="flex gap-4"
+              className="flex flex-wrap gap-x-4 gap-y-1"
             >
               <div className="mb-2 flex items-center gap-2 text-xs sm:text-base">
                 <span className="font-bold text-[#C3E41D]">1+</span>
@@ -122,7 +122,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 <span className={mutedColor}>projects explored</span>
               </div>
             </TimelineContent>
-            <div className="right-0 bottom-16 flex flex-row-reverse gap-4 lg:absolute lg:flex-col lg:gap-0">
+            <div className="right-0 bottom-16 flex flex-row-reverse justify-end gap-4 sm:justify-start lg:absolute lg:flex-col lg:gap-0">
               <TimelineContent
                 as="div"
                 animationNum={6}
@@ -198,7 +198,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
           </div>
 
           <div className="md:col-span-1">
-            <div className="text-right">
+            <div className="text-left md:text-right">
               <TimelineContent
                 as="div"
                 animationNum={12}
@@ -236,7 +236,7 @@ export default function AboutSection({ isDark = true }: AboutSectionProps) {
                 timelineRef={heroRef}
                 customVariants={revealVariants}
                 href="#projects"
-                className="ml-auto flex w-fit cursor-pointer gap-2 rounded-lg border border-neutral-700 bg-neutral-900 px-5 py-3 font-semibold text-white shadow-lg shadow-neutral-900 transition-all duration-300 ease-in-out hover:gap-4 hover:bg-neutral-950"
+                className="flex w-fit cursor-pointer gap-2 rounded-lg border border-neutral-700 bg-neutral-900 px-5 py-3 font-semibold text-white shadow-lg shadow-neutral-900 transition-all duration-300 ease-in-out hover:gap-4 hover:bg-neutral-950 md:ml-auto"
               >
                 VIEW PROJECTS <ArrowRight />
               </TimelineContent>

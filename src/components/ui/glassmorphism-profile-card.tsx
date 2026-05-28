@@ -55,7 +55,7 @@ export default function GlassmorphismProfileCard({
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: 24, scale: 0.98 }}
       transition={{ duration: 0.28, ease: "easeOut" }}
-      className={cn("relative w-full max-w-sm", className)}
+      className={cn("relative w-full max-w-[min(24rem,calc(100vw-1.5rem))]", className)}
     >
       <div className="pointer-events-none absolute inset-x-6 -bottom-8 top-[86%] z-0 rounded-[28px] bg-[#C3E41D]/90 shadow-[0_40px_80px_-18px_rgba(195,228,29,0.85)]" />
 
@@ -73,8 +73,8 @@ export default function GlassmorphismProfileCard({
           "dark:bg-neutral-950/75",
         )}
       >
-        <CardContent className="p-6 sm:p-7">
-          <div className="mb-6 flex items-center justify-between text-sm text-neutral-400">
+        <CardContent className="p-4 sm:p-7">
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-2 text-xs text-neutral-400 sm:text-sm">
             <div className="flex items-center gap-2">
               <span className={cn("inline-block h-2.5 w-2.5 animate-pulse rounded-full", statusColor)} />
               <span className="select-none">{statusText}</span>
@@ -86,7 +86,7 @@ export default function GlassmorphismProfileCard({
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5">
-            <div className="relative h-48 w-48 shrink-0 overflow-hidden rounded-[20px] border border-white/10 bg-black ring-2 ring-white/10">
+            <div className="relative h-40 w-40 shrink-0 overflow-hidden rounded-[20px] border border-white/10 bg-black ring-2 ring-white/10 sm:h-48 sm:w-48">
               <img
                 src={avatarSrc}
                 alt={`${name} avatar`}
@@ -94,7 +94,7 @@ export default function GlassmorphismProfileCard({
               />
             </div>
             <div className="min-w-0 text-center">
-              <h3 className="truncate text-xl font-semibold tracking-tight sm:text-3xl">
+              <h3 className="text-xl font-semibold tracking-tight sm:text-3xl">
                 {name}
               </h3>
               <p className="mt-1 text-sm text-neutral-400">{role}</p>

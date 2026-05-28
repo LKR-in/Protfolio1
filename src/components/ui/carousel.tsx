@@ -90,13 +90,13 @@ export const ProjectsCarousel = React.forwardRef<HTMLDivElement, ProjectsCarouse
 
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex snap-x snap-mandatory space-x-4 overflow-x-auto scroll-smooth px-4 sm:px-6 md:space-x-6"
+          className="scrollbar-hide flex snap-x snap-mandatory space-x-4 overflow-x-auto scroll-smooth px-4 pb-1 sm:px-6 md:space-x-6"
         >
           {projects.map((project) => {
             const CardWrapper = project.href ? "a" : "div";
 
             return (
-              <div key={project.id} className="w-[240px] flex-shrink-0 snap-start sm:w-[280px]">
+              <div key={project.id} className="w-[min(78vw,240px)] flex-shrink-0 snap-start sm:w-[280px]">
                 <CardWrapper
                   href={project.href}
                   target={project.href ? "_blank" : undefined}
@@ -107,7 +107,7 @@ export const ProjectsCarousel = React.forwardRef<HTMLDivElement, ProjectsCarouse
                   <img
                     src={project.imageSrc}
                     alt={`Preview for ${project.title}`}
-                    className="h-[320px] w-full object-cover sm:h-[380px]"
+                    className="h-[300px] w-full object-cover sm:h-[380px]"
                   />
                   <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
                     <div>
