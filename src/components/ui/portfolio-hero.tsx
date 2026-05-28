@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import AboutSection from "@/components/ui/about-section";
 
 const Button = React.forwardRef<
   HTMLButtonElement,
@@ -224,7 +225,7 @@ export default function PortfolioHero() {
         </nav>
       </header>
 
-      <main className="relative flex min-h-screen flex-col overflow-hidden">
+      <main id="home" className="relative flex min-h-screen flex-col overflow-hidden">
         <div className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-4">
           <div className="relative text-center">
             <div>
@@ -281,6 +282,7 @@ export default function PortfolioHero() {
           <ChevronDown className="h-5 w-5 text-neutral-500 transition-colors duration-300 hover:text-black md:h-8 md:w-8 dark:hover:text-white" />
         </Button>
       </main>
+      <AboutSection isDark={isDark} />
     </div>
   );
 }
