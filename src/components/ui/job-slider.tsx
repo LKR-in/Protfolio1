@@ -31,18 +31,20 @@ export default function JobSlider() {
   return (
     <section className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-10 rounded-lg border border-neutral-200 bg-white px-4 py-8 transition-colors dark:border-neutral-800 dark:bg-neutral-950 md:flex-row md:px-8 md:py-10">
       <div className="w-full space-y-5 text-left md:w-2/5">
+        <p className="mb-3 text-sm font-medium uppercase text-[#C3E41D]">
+          Experience Map
+        </p>
         <img
           src="images/logo.png?auto=format&fit=crop&w=600&q=90"
           alt="Lavjeet"
           className="mx-auto aspect-[4/3] w-full max-w-[320px] rounded-lg border border-neutral-200 object-cover shadow-lg shadow-neutral-200/60 dark:border-neutral-800 dark:shadow-black/40 md:mx-0"
         />
         <div className="space-y-3">
-          <p className="text-sm font-medium uppercase text-[#C3E41D]">Experience Map</p>
           <h2 className="text-3xl font-semibold leading-tight text-neutral-950 dark:text-white md:text-5xl">
             Laziness is the key...
           </h2>
           <p className="max-w-md text-neutral-600 dark:text-neutral-400">
-           A progressive timeline documenting the engineering roles and technical projects I executed.
+            A progressive timeline documenting the engineering roles and technical projects I executed.
           </p>
         </div>
       </div>

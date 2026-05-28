@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import AboutSection from "@/components/ui/about-section";
 import ContactSection from "@/components/ui/contact-section";
 import ExperienceSection from "@/components/ui/experience-section";
+import GlassmorphismProfileCard from "@/components/ui/glassmorphism-profile-card";
 import ProjectsSection from "@/components/ui/projects-section";
 
 const Button = React.forwardRef<
@@ -93,6 +95,7 @@ const BlurText: React.FC<BlurTextProps> = ({
 export default function PortfolioHero() {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProfileCardOpen, setIsProfileCardOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -252,16 +255,35 @@ export default function PortfolioHero() {
             </div>
 
             <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-              <div className="h-[110px] w-[65px] cursor-pointer overflow-hidden rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 sm:h-[152px] sm:w-[90px] md:h-[185px] md:w-[110px] lg:h-[218px] lg:w-[129px]">
+              <button
+                type="button"
+                className="h-[110px] w-[65px] cursor-pointer overflow-hidden rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C3E41D] sm:h-[152px] sm:w-[90px] md:h-[185px] md:w-[110px] lg:h-[218px] lg:w-[129px]"
+                aria-label="Open profile card"
+                onClick={() => setIsProfileCardOpen(true)}
+              >
                 <img
                   src="images/logo.png?auto=format&fit=crop&w=480&q=80"
                   alt="Profile"
                   className="h-full w-full object-cover"
                 />
-              </div>
+              </button>
             </div>
           </div>
         </div>
+
+        <AnimatePresence>
+          {isProfileCardOpen && (
+            <div
+              className="fixed inset-0 z-[80] flex items-center justify-center bg-black/20 px-4 py-8 backdrop-blur-[2px] md:items-center md:justify-end md:px-10"
+              onMouseDown={() => setIsProfileCardOpen(false)}
+              role="presentation"
+            >
+              <div onMouseDown={(event) => event.stopPropagation()}>
+                <GlassmorphismProfileCard />
+              </div>
+            </div>
+          )}
+        </AnimatePresence>
 
         <div className="absolute bottom-16 left-1/2 w-full -translate-x-1/2 px-6 sm:bottom-20 md:bottom-24 lg:bottom-32 xl:bottom-36">
           <div className="flex justify-center">
