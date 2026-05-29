@@ -231,10 +231,20 @@ export default function PortfolioHero() {
       </header>
 
       <main id="home" className="relative flex min-h-svh flex-col overflow-hidden">
+        <video
+          className="absolute inset-0 z-0 h-full w-full object-cover"
+          src="/background.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 z-[1] bg-black/45" aria-hidden="true" />
         <h1 className="sr-only">
           Lavjeet Kumar Rai - Full-Stack Developer and AI Research Learner
         </h1>
-        <div className="absolute top-1/2 left-1/2 w-full max-w-full -translate-x-1/2 -translate-y-1/2 px-3 sm:px-4">
+        <div className="absolute top-1/2 left-1/2 z-10 w-full max-w-full -translate-x-1/2 -translate-y-1/2 px-3 sm:px-4">
           <div className="relative text-center">
             <div>
               <BlurText
@@ -260,7 +270,7 @@ export default function PortfolioHero() {
             <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
               <button
                 type="button"
-                className="h-[96px] w-[57px] cursor-pointer overflow-hidden rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C3E41D] sm:h-[152px] sm:w-[90px] md:h-[185px] md:w-[110px] lg:h-[218px] lg:w-[129px]"
+                className="h-[96px] w-[57px] cursor-pointer overflow-hidden rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 focus-visible:outline-null focus-visible:ring-2 focus-visible:ring-[#C3E41D] sm:h-[200x] sm:w-[120px] md:h-[250px] md:w-[150px] lg:h-[300px] lg:w-[150px]"
                 aria-label="Open profile card"
                 onClick={() => setIsProfileCardOpen(true)}
               >
@@ -288,7 +298,7 @@ export default function PortfolioHero() {
           )}
         </AnimatePresence>
 
-        <div className="absolute bottom-14 left-1/2 w-full -translate-x-1/2 px-4 sm:bottom-20 sm:px-6 md:bottom-24 lg:bottom-32 xl:bottom-36">
+        <div className="absolute bottom-14 left-1/2 z-10 w-full -translate-x-1/2 px-4 sm:bottom-20 sm:px-6 md:bottom-24 lg:bottom-32 xl:bottom-36">
           <div className="flex justify-center">
             <BlurText
               text="Laziness is the key...."
@@ -303,7 +313,7 @@ export default function PortfolioHero() {
 
         <Button
           type="button"
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 p-0 transition-colors duration-300 md:bottom-10"
+          className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 p-0 transition-colors duration-300 md:bottom-10"
           aria-label="Scroll down"
         >
           <ChevronDown className="h-5 w-5 text-neutral-500 transition-colors duration-300 hover:text-black md:h-8 md:w-8 dark:hover:text-white" />
