@@ -92,7 +92,11 @@ const BlurText: React.FC<BlurTextProps> = ({
   );
 };
 
-export default function PortfolioHero() {
+interface PortfolioHeroProps {
+  onHeroVideoReady?: () => void;
+}
+
+export default function PortfolioHero({ onHeroVideoReady }: PortfolioHeroProps) {
   const [isDark, setIsDark] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileCardOpen, setIsProfileCardOpen] = useState(false);
@@ -238,6 +242,9 @@ export default function PortfolioHero() {
           muted
           loop
           playsInline
+          onCanPlayThrough={onHeroVideoReady}
+          onLoadedData={onHeroVideoReady}
+          onError={onHeroVideoReady}
           aria-hidden="true"
         />
         <div className="absolute inset-0 z-[1] bg-black/45" aria-hidden="true" />
