@@ -140,7 +140,7 @@ export default function PortfolioHero({ onHeroVideoReady }: PortfolioHeroProps) 
   { label: "PROJECTS", href: "#projects" },
   { label: "EXPERIENCE", href: "#experience" },
   { label: "CONTACT", href: "#contact" },
-  { label: "BLOG", href: "#blog" }
+  { label: "BLOG", href: "https://blog.lavjeetkumarrai.dpdns.org", external: true }
 ];
   return (
     <div
@@ -179,6 +179,7 @@ export default function PortfolioHero({ onHeroVideoReady }: PortfolioHeroProps) 
                   <a
                     key={item.label}
                     href={item.href}
+                    {...(item.external && { target: "_blank", rel: "noopener noreferrer" })}
                     className="block cursor-pointer px-2 py-1.5 text-base font-bold tracking-tight transition-colors duration-300 sm:text-lg md:text-xl"
                     style={{
                       color: item.highlight

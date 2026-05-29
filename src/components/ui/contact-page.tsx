@@ -85,13 +85,18 @@ export function ContactPage() {
 
           <Box
             icon={Send}
-            title="Availability"
-            description="A short brief, link, or repo is enough to start."
+            title="Blog"
+            description="Read my latest posts and insights."
             className="md:border-r-0"
           >
-            <span className="text-sm font-medium leading-relaxed text-neutral-700 dark:text-neutral-300">
-              {APP_STATUS}
-            </span>
+            <a
+              href="https://blog.lavjeetkumarrai.dpdns.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium leading-relaxed text-[#white] hover:underline transition-colors"
+            >
+              blog.lavjeetkumarrai.dpdns.org
+            </a>
           </Box>
         </div>
 
