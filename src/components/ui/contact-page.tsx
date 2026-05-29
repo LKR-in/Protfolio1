@@ -15,7 +15,6 @@ import { cn } from "@/lib/utils";
 
 const APP_EMAIL = "lavjeetkumarrai@gmail.com";
 const APP_LOCATION = "India";
-const APP_STATUS = "Open to internships, collaborations, and AI/full-stack projects";
 
 const socialLinks = [
   {
