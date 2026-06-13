@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 const slides = [
   [
     { role: "Open Source Contributor @sugarlabs", count: "2026" },
-    { role: "Open Source Contributor @@HSF by cern", count: "2026" },
+    { role: "Open Source Contributor @HSF (Cern)", count: "2026" },
     { role: "Open Source Contributor @singlecorelabs", count: "2026" },
     { role: "Seed Grant Recipient ", count: "2026" },
     { role: "Understanding Machine-Learning", count: "2026" },
