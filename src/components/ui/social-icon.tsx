@@ -11,7 +11,7 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
   {
-    label: "CV",
+    label: "Cv",
     href: "/lavjeet.pdf",
   },
   {
